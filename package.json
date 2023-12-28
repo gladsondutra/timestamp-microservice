@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon ./app.js\" \"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch\""
+    "start": "concurrently \"nodemon ./app.js\" \"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch\""
   },
   "keywords": [],
   "author": "",
