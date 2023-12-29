@@ -4,30 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="style.css">
   <title>Timestamp Microservice</title>
 </head>
 
 <body>
-  <div class="bg-slate-950 text-slate-100 text-center flex-col h-screen">
-    <h1 class="text-3xl font-bold py-10">Timestamp Microservice</h1>
-    <p class="py-5">The Timestamp Microservice helps you to get a JSON object with a Unix Timestamp code.<br>You can
+  <div>
+    <h1>Timestamp Microservice</h1>
+    <p>The Timestamp Microservice helps you to get a JSON object with a Unix Timestamp code.<br>You can
       provide a custom date or access /api to get the current date value.</p>
-    <p class="py-5 font-bold">Input Example:</p>
-    <div class="flex justify-center justify-items-center">
-      <p
-        class="py-5 text-sm sm:text-base inline-flex text-left items-center bg-gray-800 text-white rounded-lg p-4 pl-6">
-        /api/2023-12-31</p>
-      <p class="p-5">or</p>
-      <p
-        class="py-5 text-sm sm:text-base inline-flex text-left items-center bg-gray-800 text-white rounded-lg p-4 pl-6">
-        /api/1451001600000</p>
+    <p><b>Input Example:</b></p>
+    <div class="middle-text">
+      <a href="/api/2023-12-31">/api/2023-12-31</a>
+      <p>or</p>
+      <a href="/api/1703980800000">
+        /api/1703980800000</a>
     </div>
-    <p class="py-5 font-bold">Output:</p>
-    <p class="py-5 text-sm sm:text-base inline-flex text-left items-center bg-gray-800 text-white rounded-lg p-4 pl-6">
-      {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</p>
-    <div class="py-10">
-      <a class="text-lg text-blue-600 dark:text-blue-500 hover:underline" href="/api/2023-12-31">Try it out:
+    <p><b>Output:</b></p>
+    <p>
+      {"unix":1703980800000,"utc":"Sun, 31 Dec 2023 00:00:00 GMT"}</p>
+    <div>
+      <a href="/api/2023-12-31">Try it out:
         /api/2023-12-31</a>
     </div>
   </div>

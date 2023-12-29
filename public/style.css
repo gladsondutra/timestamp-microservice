@@ -1,0 +1,19 @@
+* {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  background-color: rgba(2, 6, 23, 255);
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+a,
+a:link,
+a:visited {
+  color: #2563eb;
+}
+
+.middle-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

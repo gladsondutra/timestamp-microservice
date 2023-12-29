@@ -7,22 +7,22 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html')
 })
 
-const result = { "unix": "", "utc": "" }
+const result = { unix: "", utc: "" }
 
 app.get('/api/:date?', (req, res) => {
   const input = req.params.date || Date.now();
   const date = new Date(input);
-
   if (!isNaN(date)) {
-    result.unix = Math.floor(date / 1000);
-    result.utc = date.toString();
+    result.unix = date.getTime();
+    result.utc = date.toUTCString();
     res.json(result);
   }
-  else if (new Date(input * 1000) != "Invalid Date") {
-    result.unix = parseInt(input)
-    result.utc = new Date(input * 1000).toString()
+  else if (Number(input) >= 0 && Number(input) <= 2147482800000) {
+    result.unix = new Date(parseInt(input)).getTime()
+    result.utc = new Date(parseInt(input)).toUTCString()
     res.json(result)
-  } else {
+  }
+  else {
     res.json({ error: "Invalid Date" });
   }
 });
